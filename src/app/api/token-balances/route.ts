@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
 
       return {
         publicKey: publicKey,
-        address: 0x0,
+        address: null,
         value: balance.toString(),
         name: "Ether",
         symbol: "ETH",

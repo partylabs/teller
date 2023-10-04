@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { createPublicClient, getAddress, http } from "viem";
 import { mainnet } from "viem/chains";
-import BALANCES from "@/app/data/balance.json";
-import ERC20 from "@/app/data/abi/ERC20.json";
+import BALANCES from "@/app/models/balancelist.json";
+import ERC20 from "@/app/models/abi/ERC20.json";
 import { BalanceOfResult } from "@/app/lib/types";
 
 export async function POST(request: NextRequest) {
@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
   const { publicKeys } = await request.json();
 
   const tokens = BALANCES.tokens.map((token: any) => {
-    return token.chainAddress[mainnet.id];
+    return token.address;
   });
 
   let gasTokenBalances = await Promise.all(
@@ -61,13 +61,10 @@ export async function POST(request: NextRequest) {
       let result = results[index];
       if (result && result.result !== BigInt(0)) {
         return {
+          ...token,
           publicKey: contract.args[0],
           address: contract.address,
           value: result.result?.toString() ?? "0",
-          name: token?.name,
-          symbol: token.symbol,
-          decimals: token.decimals,
-          logoURI: token.logoURI,
         };
       } else {
         return null;

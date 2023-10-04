@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { createPublicClient, getAddress, http } from "viem";
+import { createPublicClient, http } from "viem";
 import { mainnet } from "viem/chains";
+import TOKENLIST from "@/app/models/tokenlist.json";
 
 enum FeeAmount {
   LOWEST = 100,
@@ -18,8 +19,9 @@ export async function POST(request: NextRequest) {
 
   const quoter = await fetch("https://contracts.partylabs.org/uniswap-quoter-v3.json").then((res) => res.json());
   const data = await request.json();
+  const tokens = data["1"];
 
-  const quoterContracts = data["1"].map((token: string) => {
+  const quoterContracts = tokens.map((token: string) => {
     return {
       address: "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6",
       abi: quoter,
@@ -28,13 +30,28 @@ export async function POST(request: NextRequest) {
     };
   });
 
-  const results = (
-    await client.multicall({
-      contracts: quoterContracts,
-    })
-  ).filter((result) => result.status !== "failure");
+  const results = await client.multicall({
+    contracts: quoterContracts,
+  });
 
-  console.log(results);
+  const quotes = results
+    .map((quote: any, index: number) => {
+      if (quote && quote.status !== "failure") {
+        const token = tokens[index];
+        const tokenMapKey = `1_${token}` as any;
+        const tokenData = TOKENLIST.tokenMap[tokenMapKey as keyof typeof TOKENLIST.tokenMap];
+
+        return {
+          ...tokenData,
+          quote: quote.result.toString() ?? "0",
+        };
+      } else {
+        return null;
+      }
+    })
+    .filter((item: any) => item !== null);
+
+  console.log(quotes);
 
   return NextResponse.json(
     {

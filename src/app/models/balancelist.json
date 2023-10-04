@@ -1,0 +1,254 @@
+{
+  "name": "party-tokens",
+  "timestamp": 1696400110228,
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "keywords": ["party", "token", "list"],
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8",
+      "name": "XEN Crypto",
+      "symbol": "XEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x06450dee7fd2fb8e39061434babcfc05599a6fb8.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x80f0C1c49891dcFDD40b6e0F960F84E6042bcB6F",
+      "name": "DBXen Token",
+      "symbol": "DXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x80f0c1c49891dcfdd40b6e0f960f84e6042bcb6f.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "FENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+      "name": "renBTC",
+      "symbol": "renBTC",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xeb4c2781e4eba804ce9a9803c67d0893436bb27d.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://token.partylabs.org/0xdac17f958d2ee523a2206206994597c13d831ec7.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://token.partylabs.org/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xc944E90C64B2c07662A292be6244BDf05Cda44a7",
+      "name": "Graph Token",
+      "symbol": "GRT",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc944e90c64b2c07662a292be6244bdf05cda44a7.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "name": "Uniswap",
+      "symbol": "UNI",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+      "name": "SHIBA INU",
+      "symbol": "SHIB",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
+      "name": "HEX",
+      "symbol": "HEX",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x2b591e99afe9f32eaa6214f7b7629768c40eeb39.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x3819f64f282bf135d62168C1e513280dAF905e06",
+      "name": "Hedron",
+      "symbol": "HDRN",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0x3819f64f282bf135d62168c1e513280daf905e06.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xE9F721E7419423f11863e83DbD710b5D6127b5b0",
+      "name": "ePhiat",
+      "symbol": "ePhiat",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xe9f721e7419423f11863e83dbd710b5d6127b5b0.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x6b175474e89094c44da98b954eedeac495271d0f.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "name": "ChainLink Token",
+      "symbol": "LINK",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x514910771af9ca656af840dff83e8264ecf986ca.webp"
+    }
+  ],
+  "tokenMap": {
+    "1_0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8": {
+      "chainId": 1,
+      "address": "0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8",
+      "name": "XEN Crypto",
+      "symbol": "XEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x06450dee7fd2fb8e39061434babcfc05599a6fb8.webp"
+    },
+    "1_0x80f0C1c49891dcFDD40b6e0F960F84E6042bcB6F": {
+      "chainId": 1,
+      "address": "0x80f0C1c49891dcFDD40b6e0F960F84E6042bcB6F",
+      "name": "DBXen Token",
+      "symbol": "DXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x80f0c1c49891dcfdd40b6e0f960f84e6042bcb6f.webp"
+    },
+    "1_0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055": {
+      "chainId": 1,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "FENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
+    },
+    "1_0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599": {
+      "chainId": 1,
+      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599.webp"
+    },
+    "1_0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D": {
+      "chainId": 1,
+      "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+      "name": "renBTC",
+      "symbol": "renBTC",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xeb4c2781e4eba804ce9a9803c67d0893436bb27d.webp"
+    },
+    "1_0xdAC17F958D2ee523a2206206994597C13D831ec7": {
+      "chainId": 1,
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://token.partylabs.org/0xdac17f958d2ee523a2206206994597c13d831ec7.webp"
+    },
+    "1_0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": {
+      "chainId": 1,
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://token.partylabs.org/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.webp"
+    },
+    "1_0xc944E90C64B2c07662A292be6244BDf05Cda44a7": {
+      "chainId": 1,
+      "address": "0xc944E90C64B2c07662A292be6244BDf05Cda44a7",
+      "name": "Graph Token",
+      "symbol": "GRT",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc944e90c64b2c07662a292be6244bdf05cda44a7.webp"
+    },
+    "1_0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984": {
+      "chainId": 1,
+      "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "name": "Uniswap",
+      "symbol": "UNI",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984.webp"
+    },
+    "1_0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE": {
+      "chainId": 1,
+      "address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+      "name": "SHIBA INU",
+      "symbol": "SHIB",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce.webp"
+    },
+    "1_0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39": {
+      "chainId": 1,
+      "address": "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
+      "name": "HEX",
+      "symbol": "HEX",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x2b591e99afe9f32eaa6214f7b7629768c40eeb39.webp"
+    },
+    "1_0x3819f64f282bf135d62168C1e513280dAF905e06": {
+      "chainId": 1,
+      "address": "0x3819f64f282bf135d62168C1e513280dAF905e06",
+      "name": "Hedron",
+      "symbol": "HDRN",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0x3819f64f282bf135d62168c1e513280daf905e06.webp"
+    },
+    "1_0xE9F721E7419423f11863e83DbD710b5D6127b5b0": {
+      "chainId": 1,
+      "address": "0xE9F721E7419423f11863e83DbD710b5D6127b5b0",
+      "name": "ePhiat",
+      "symbol": "ePhiat",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xe9f721e7419423f11863e83dbd710b5d6127b5b0.webp"
+    },
+    "1_0x6B175474E89094C44Da98b954EedeAC495271d0F": {
+      "chainId": 1,
+      "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x6b175474e89094c44da98b954eedeac495271d0f.webp"
+    },
+    "1_0x514910771AF9Ca656af840dff83E8264EcF986CA": {
+      "chainId": 1,
+      "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "name": "ChainLink Token",
+      "symbol": "LINK",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x514910771af9ca656af840dff83e8264ecf986ca.webp"
+    }
+  }
+}

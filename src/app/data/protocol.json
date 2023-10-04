@@ -28,6 +28,15 @@
     },
     {
       "chainAddress": {
+        "1": "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6",
+        "10": "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6",
+        "137": "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6"
+      },
+      "name": "Uniswap Quoter v3",
+      "abiURI": "https://contracts.partylabs.org/uniswap-quoter-v3.json"
+    },
+    {
+      "chainAddress": {
         "1": "0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8",
         "56": "0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e",
         "66": "0x1cC4D981e897A3D2E7785093A648c0a75fAd0453",

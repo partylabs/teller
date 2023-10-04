@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
 
         return {
           ...tokenData,
-          quote: quote.result.toString() ?? "0",
+          quoteUSDC: quote.result.toString() ?? "0",
         };
       } else {
         return null;
@@ -51,17 +51,5 @@ export async function POST(request: NextRequest) {
     })
     .filter((item: any) => item !== null);
 
-  console.log(quotes);
-
-  return NextResponse.json(
-    {
-      body: request.body,
-      path: request.nextUrl.pathname,
-      query: request.nextUrl.search,
-      cookies: request.cookies.getAll(),
-    },
-    {
-      status: 200,
-    }
-  );
+  return NextResponse.json(quotes, { status: 200 });
 }

@@ -1,22 +1,41 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { createPublicClient, http } from "viem";
+import { createPublicClient, getAddress, http } from "viem";
 import { mainnet } from "viem/chains";
 import BALANCES from "@/app/data/balance.json";
 import ERC20 from "@/app/data/abi/ERC20.json";
-import { Token, BalanceOfResult } from "@/app/lib/types";
+import { BalanceOfResult } from "@/app/lib/types";
 
 export async function POST(request: NextRequest) {
-  const { publicKeys } = await request.json();
-
   const client = createPublicClient({
     chain: mainnet,
     transport: http(),
   });
 
+  const { publicKeys } = await request.json();
+
   const tokens = BALANCES.tokens.map((token: any) => {
     return token.chainAddress[mainnet.id];
   });
+
+  let gasTokenBalances = await Promise.all(
+    publicKeys.map(async (publicKey: string) => {
+      const publicAddress = getAddress(publicKey);
+      let balance = await client.getBalance({
+        address: publicAddress,
+      });
+
+      return {
+        publicKey: publicKey,
+        address: 0x0,
+        value: balance.toString(),
+        name: "Ether",
+        symbol: "ETH",
+        decimals: 18,
+        logoURI: "https://token.partylabs.org/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2.webp".toLowerCase(),
+      };
+    })
+  );
 
   // for each publicKey, get all tokens balances
   let erc20Contracts = publicKeys.flatMap((publicKey: string) => {
@@ -35,13 +54,14 @@ export async function POST(request: NextRequest) {
   })) as BalanceOfResult[];
 
   // zip erc20Contracts and results
-  const zipped = erc20Contracts
+  const erc20Balances = erc20Contracts
     .map((contract: any, index: number) => {
       let tokenIndex = index % tokens.length;
       let token = BALANCES.tokens[tokenIndex];
       let result = results[index];
       if (result && result.result !== BigInt(0)) {
         return {
+          publicKey: contract.args[0],
           address: contract.address,
           value: result.result?.toString() ?? "0",
           name: token?.name,
@@ -55,5 +75,6 @@ export async function POST(request: NextRequest) {
     })
     .filter((item: any) => item !== null);
 
-  return NextResponse.json(zipped, { status: 200 });
+  const allBalances = gasTokenBalances.concat(erc20Balances);
+  return NextResponse.json(allBalances, { status: 200 });
 }

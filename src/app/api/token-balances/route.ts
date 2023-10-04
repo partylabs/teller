@@ -26,13 +26,12 @@ export async function POST(request: NextRequest) {
       });
 
       return {
-        publicKey: publicKey,
+        chainId: mainnet.id,
         address: null,
-        value: balance.toString(),
-        name: "Ether",
-        symbol: "ETH",
-        decimals: 18,
+        ...mainnet.nativeCurrency,
         logoURI: "https://token.partylabs.org/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2.webp".toLowerCase(),
+        publicKey: publicKey,
+        value: balance.toString(),
       };
     })
   );
@@ -62,6 +61,7 @@ export async function POST(request: NextRequest) {
       if (result && result.result !== BigInt(0)) {
         return {
           ...token,
+          chainId: mainnet.id,
           publicKey: contract.args[0],
           address: contract.address,
           value: result.result?.toString() ?? "0",

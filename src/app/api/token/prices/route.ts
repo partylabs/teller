@@ -10,10 +10,10 @@ export async function POST(request: NextRequest) {
   const WETH = TOKENLIST.tokenMap["1_0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"];
 
   const data = await request.json();
-  const tokens = data["1"];
+  const tokens = [WETH.address].concat(data["1"]);
 
   const results = await Promise.all(
-    tokens.concat(WETH.address).map(async (token: string, index: number) => {
+    tokens.map(async (token: string, index: number) => {
       const uniswapPair = new UniswapPair({
         providerUrl: "https://eth.llamarpc.com",
         fromTokenContractAddress: USDC,

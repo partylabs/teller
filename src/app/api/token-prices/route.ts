@@ -25,9 +25,9 @@ export async function POST(request: NextRequest) {
         }),
       });
       const uniswapPairFactory = await uniswapPair.createFactory();
-      const trade = await uniswapPairFactory.trade("1");
+      const trade = await uniswapPairFactory.trade("10");
       if (index === tokens.length) {
-        const nativeTokenQuote = 1 / Number(trade.expectedConvertQuote);
+        const nativeTokenQuote = 10 / Number(trade.expectedConvertQuote);
         return nativeTokenQuote;
       }
       return 1 / Number(trade.expectedConvertQuote);

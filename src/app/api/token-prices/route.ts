@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { mainnet } from "viem/chains";
 import TOKENLIST from "@/app/models/tokenlist.json";
+import BALANCES from "@/app/models/balancelist.json";
 import { UniswapPair, UniswapPairSettings } from "simple-uniswap-sdk";
 
 export async function POST(request: NextRequest) {
@@ -37,8 +38,8 @@ export async function POST(request: NextRequest) {
     .flatMap((quote: any, index: number) => {
       if (quote && quote.status !== "failure") {
         const token = tokens[index];
-        const tokenMapKey = `1_${token}` as any;
-        const tokenData = TOKENLIST.tokenMap[tokenMapKey as keyof typeof TOKENLIST.tokenMap];
+        const tokenMapKey = `1_${token}`;
+        const tokenData = BALANCES.tokenMap[tokenMapKey as keyof typeof BALANCES.tokenMap];
 
         if (tokenData) {
           return {

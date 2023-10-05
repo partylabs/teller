@@ -9,7 +9,7 @@ import { BalanceOfResult } from "@/app/lib/types";
 export async function POST(request: NextRequest) {
   const client = createPublicClient({
     chain: mainnet,
-    transport: http("https://eth.llamarpc.com"),
+    transport: http(),
   });
 
   const { publicKeys } = await request.json();

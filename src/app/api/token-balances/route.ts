@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
         ...mainnet.nativeCurrency,
         logoURI: "https://token.partylabs.org/0x0000000000000000000000000000000000000000.webp".toLowerCase(),
         publicKey: publicKey,
-        value: balance.toString(),
+        units: balance.toString(),
       };
     })
   );
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
           chainId: mainnet.id,
           publicKey: contract.args[0],
           address: contract.address,
-          value: result.result?.toString() ?? "0",
+          units: result.result?.toString() ?? "0",
         };
       } else {
         return null;

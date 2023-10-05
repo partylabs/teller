@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
             name: mainnet.nativeCurrency.name,
             symbol: mainnet.nativeCurrency.symbol,
             decimals: mainnet.nativeCurrency.decimals,
-            logoURI: WETH.logoURI,
+            logoURI: "https://token.partylabs.org/0x0000000000000000000000000000000000000000.webp",
             quoteUSDC: quote,
           };
         }

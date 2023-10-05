@@ -34,26 +34,30 @@ export async function POST(request: NextRequest) {
   );
 
   var quotes = results
-    .map((quote: any, index: number) => {
-      const token = tokens[index];
-      const tokenMapKey = `1_${token}` as any;
-      const tokenData = TOKENLIST.tokenMap[tokenMapKey as keyof typeof TOKENLIST.tokenMap];
+    .flatMap((quote: any, index: number) => {
+      if (quote && quote.status !== "failure") {
+        const token = tokens[index];
+        const tokenMapKey = `1_${token}` as any;
+        const tokenData = TOKENLIST.tokenMap[tokenMapKey as keyof typeof TOKENLIST.tokenMap];
 
-      if (tokenData) {
-        return {
-          ...tokenData,
-          quoteUSDC: Number(quote).toFixed(8),
-        };
+        if (tokenData) {
+          return {
+            ...tokenData,
+            quoteUSDC: quote,
+          };
+        } else {
+          return {
+            chainId: mainnet.id,
+            address: null,
+            name: mainnet.nativeCurrency.name,
+            symbol: mainnet.nativeCurrency.symbol,
+            decimals: mainnet.nativeCurrency.decimals,
+            logoURI: WETH.logoURI,
+            quoteUSDC: quote,
+          };
+        }
       } else {
-        return {
-          chainId: mainnet.id,
-          address: "0x0000000000000000000000000000000000000000",
-          name: WETH.name,
-          symbol: WETH.symbol,
-          decimals: WETH.decimals,
-          logoURI: WETH.logoURI,
-          quoteUSDC: Number(quote).toFixed(8),
-        };
+        return null;
       }
     })
     .filter((item: any) => item !== null);

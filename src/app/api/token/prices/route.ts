@@ -12,6 +12,8 @@ export async function POST(request: NextRequest) {
   const data = await request.json();
   const tokens = [WETH.address].concat(data["1"]);
 
+  const SIZE = 10;
+
   const results = await Promise.all(
     tokens.map(async (token: string, index: number) => {
       const uniswapPair = new UniswapPair({
@@ -25,12 +27,12 @@ export async function POST(request: NextRequest) {
         }),
       });
       const uniswapPairFactory = await uniswapPair.createFactory();
-      const trade = await uniswapPairFactory.trade("10");
+      const trade = await uniswapPairFactory.trade(SIZE.toString());
       if (index === tokens.length) {
-        const nativeTokenQuote = 10 / Number(trade.expectedConvertQuote);
+        const nativeTokenQuote = SIZE / Number(trade.expectedConvertQuote);
         return nativeTokenQuote;
       }
-      return 1 / Number(trade.expectedConvertQuote);
+      return SIZE / Number(trade.expectedConvertQuote);
     })
   );
 

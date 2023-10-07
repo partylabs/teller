@@ -2,15 +2,15 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import BALANCES from "@/app/models/balancelist.json";
 import { UniswapPair, UniswapPairSettings } from "simple-uniswap-sdk";
-import { approvedChains } from "@/app/lib/approved-chains";
-import { approvedDexes } from "@/app/lib/approved-dexes";
+import { CHAINS } from "@/app/lib/official/chains";
+import { DEXES } from "@/app/lib/approved-dexes";
 import { RPCS } from "@/app/lib/official/rpcs";
 
 export async function POST(request: NextRequest) {
   const chainId = request.url.split("/").pop();
 
-  let chain = approvedChains[chainId as unknown as keyof typeof approvedChains];
-  let dexSettings = approvedDexes[chainId as unknown as keyof typeof approvedDexes];
+  let chain = CHAINS[chainId as unknown as keyof typeof CHAINS];
+  let dexSettings = DEXES[chainId as unknown as keyof typeof DEXES];
   let providerUrl = RPCS[chainId as unknown as keyof typeof RPCS];
   let nativeWrappedToken = dexSettings.customNetwork?.nativeWrappedTokenInfo;
   let USDC = dexSettings.customNetwork?.baseTokens?.usdc;

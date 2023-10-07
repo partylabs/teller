@@ -4,13 +4,13 @@ import { createPublicClient, getAddress, http } from "viem";
 import BALANCES from "@/app/models/balancelist.json";
 import ERC20 from "@/app/models/abi/ERC20.json";
 import { BalanceOfResult } from "@/app/lib/types";
-import { approvedChains } from "@/app/lib/approved-chains";
+import { CHAINS } from "@/app/lib/official/chains";
 import { RPCS } from "@/app/lib/official/rpcs";
 
 export async function POST(request: NextRequest) {
   const chainId = request.url.split("/").pop();
 
-  let chain = approvedChains[chainId as unknown as keyof typeof approvedChains];
+  let chain = CHAINS[chainId as unknown as keyof typeof CHAINS];
   let providerUrl = RPCS[chainId as unknown as keyof typeof RPCS];
 
   if (chain == null) {

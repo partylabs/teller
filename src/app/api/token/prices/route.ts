@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { approvedChains } from "@/app/lib/approved-chains";
+import { CHAINS } from "@/app/lib/official/chains";
 import absoluteUrl from "next-absolute-url";
 
 export async function POST(request: NextRequest) {
   const { origin } = absoluteUrl(request);
   const data = await request.json();
 
-  const chainIds = Object.keys(approvedChains);
+  const chainIds = Object.keys(CHAINS);
 
   const prices = await Promise.all(
     chainIds.flatMap(async (chainId) => {

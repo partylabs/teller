@@ -3,7 +3,7 @@ import { arbitrum, base, bsc, mainnet, optimism, polygon, pulsechain } from "vie
 
 let ETH_ARB_OP_MATIC = new UniswapPairSettings();
 
-export const approvedDexes = {
+export const DEXES = {
   [mainnet.id]: new UniswapPairSettings({
     customNetwork: {
       nativeWrappedTokenInfo: {
@@ -35,6 +35,7 @@ export const approvedDexes = {
     },
   }),
   [polygon.id]: ETH_ARB_OP_MATIC,
+  // [zkSync.id]: zkSync,
   [pulsechain.id]: new UniswapPairSettings({
     uniswapVersions: [UniswapVersion.v2],
     cloneUniswapContractDetails: {

@@ -12,6 +12,7 @@
     "bufferutil": "^4.0.7",
     "encoding": "^0.1.13",
     "next": "13.5.4",
+    "next-absolute-url": "^1.2.2",
     "react": "^18",
     "react-dom": "^18",
     "simple-uniswap-sdk": "^3.7.0",

@@ -5,19 +5,23 @@ import BALANCES from "@/app/models/balancelist.json";
 import ERC20 from "@/app/models/abi/ERC20.json";
 import { BalanceOfResult } from "@/app/lib/types";
 import { approvedChains } from "@/app/lib/approved-chains";
+import { RPCS } from "@/app/lib/official/rpcs";
 
 export async function POST(request: NextRequest) {
   const chainId = request.url.split("/").pop();
 
-  let chain = approvedChains[chainId as keyof typeof approvedChains];
+  let chain = approvedChains[chainId as unknown as keyof typeof approvedChains];
+  let providerUrl = RPCS[chainId as unknown as keyof typeof RPCS];
 
   if (chain == null) {
     return NextResponse.json([], { status: 200 });
+  } else if (providerUrl == null) {
+    return NextResponse.json("Provider not set", { status: 400 });
   }
 
   const client = createPublicClient({
     chain: chain,
-    transport: http(),
+    transport: http(providerUrl),
   });
 
   const { publicKeys } = await request.json();
@@ -40,7 +44,7 @@ export async function POST(request: NextRequest) {
           chainId: chain.id,
           address: null,
           ...chain.nativeCurrency,
-          logoURI: "https://token.partylabs.org/0x0000000000000000000000000000000000000000.webp".toLowerCase(),
+          logoURI: `https://chain.partylabs.org/${chain.id}.webp`,
           publicKey: publicKey,
           units: balance.toString(),
         };
@@ -70,7 +74,6 @@ export async function POST(request: NextRequest) {
     if (result && result.status !== "failure" && result.result !== BigInt(0)) {
       let tokenIndex = index % tokens.length;
       let token = BALANCES.tokens[tokenIndex];
-      console.log(token);
       return {
         ...token,
         chainId: chain.id,

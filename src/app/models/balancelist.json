@@ -1,6 +1,6 @@
 {
   "name": "party-tokens",
-  "timestamp": 1696400110228,
+  "timestamp": 1696650944353,
   "version": {
     "major": 1,
     "minor": 0,
@@ -8,6 +8,14 @@
   },
   "keywords": ["party", "token", "list"],
   "tokens": [
+    {
+      "chainId": 1,
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.webp"
+    },
     {
       "chainId": 1,
       "address": "0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8",
@@ -127,9 +135,65 @@
       "symbol": "LINK",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x514910771af9ca656af840dff83e8264ecf986ca.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
+      "name": "Wrapped Pulse",
+      "symbol": "WPLS",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xa1077a294dde1b09bb078844df40758a5d0f9a27.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x95B303987A60C71504D99Aa1b13B4DA07b0790ab",
+      "name": "PulseX",
+      "symbol": "PLSX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x95b303987a60c71504d99aa1b13b4da07b0790ab.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x2fa878Ab3F87CC1C9737Fc071108F904c0B0C95d",
+      "name": "Incentive",
+      "symbol": "INC",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x2fa878ab3f87cc1c9737fc071108f904c0b0c95d.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
+      "name": "HEX",
+      "symbol": "HEX",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x2b591e99afe9f32eaa6214f7b7629768c40eeb39.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x57fde0a71132198BBeC939B98976993d8D89D225",
+      "name": "HEX from Ethereum",
+      "symbol": "HEX",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x57fde0a71132198bbec939b98976993d8d89d225.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0xb17D901469B9208B17d916112988A3FeD19b5cA1",
+      "name": "Wrapped BTC from Ethereum",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xb17d901469b9208b17d916112988a3fed19b5ca1.webp"
     }
   ],
   "tokenMap": {
+    "1_0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2": {
+      "chainId": 1,
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.webp"
+    },
     "1_0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8": {
       "chainId": 1,
       "address": "0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8",
@@ -249,6 +313,54 @@
       "symbol": "LINK",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x514910771af9ca656af840dff83e8264ecf986ca.webp"
+    },
+    "369_0xA1077a294dDE1B09bB078844df40758a5D0f9a27": {
+      "chainId": 369,
+      "address": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
+      "name": "Wrapped Pulse",
+      "symbol": "WPLS",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xa1077a294dde1b09bb078844df40758a5d0f9a27.webp"
+    },
+    "369_0x95B303987A60C71504D99Aa1b13B4DA07b0790ab": {
+      "chainId": 369,
+      "address": "0x95B303987A60C71504D99Aa1b13B4DA07b0790ab",
+      "name": "PulseX",
+      "symbol": "PLSX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x95b303987a60c71504d99aa1b13b4da07b0790ab.webp"
+    },
+    "369_0x2fa878Ab3F87CC1C9737Fc071108F904c0B0C95d": {
+      "chainId": 369,
+      "address": "0x2fa878Ab3F87CC1C9737Fc071108F904c0B0C95d",
+      "name": "Incentive",
+      "symbol": "INC",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x2fa878ab3f87cc1c9737fc071108f904c0b0c95d.webp"
+    },
+    "369_0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39": {
+      "chainId": 369,
+      "address": "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
+      "name": "HEX",
+      "symbol": "HEX",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x2b591e99afe9f32eaa6214f7b7629768c40eeb39.webp"
+    },
+    "369_0x57fde0a71132198BBeC939B98976993d8D89D225": {
+      "chainId": 369,
+      "address": "0x57fde0a71132198BBeC939B98976993d8D89D225",
+      "name": "HEX from Ethereum",
+      "symbol": "HEX",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x57fde0a71132198bbec939b98976993d8d89d225.webp"
+    },
+    "369_0xb17D901469B9208B17d916112988A3FeD19b5cA1": {
+      "chainId": 369,
+      "address": "0xb17D901469B9208B17d916112988A3FeD19b5cA1",
+      "name": "Wrapped BTC from Ethereum",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xb17d901469b9208b17d916112988a3fed19b5ca1.webp"
     }
   }
 }

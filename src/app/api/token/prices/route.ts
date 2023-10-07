@@ -12,9 +12,6 @@ export async function POST(request: NextRequest) {
   const prices = await Promise.all(
     chainIds.flatMap(async (chainId) => {
       const tokens = data[chainId] ?? [];
-      if (tokens.length === 0) {
-        return [];
-      }
       const response = await fetch(`${origin}/api/token/prices/${chainId}`, {
         method: "POST",
         headers: {

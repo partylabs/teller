@@ -19,7 +19,5 @@ export async function POST(request: NextRequest) {
   const data = await request.json();
   const tokens = data["1"];
 
-  console.log(tokens);
-
   return NextResponse.json([], { status: 200 });
 }

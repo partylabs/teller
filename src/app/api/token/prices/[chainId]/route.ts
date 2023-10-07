@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import TOKENLIST from "@/app/models/tokenlist.json";
 import BALANCES from "@/app/models/balancelist.json";
 import { UniswapPair, UniswapPairSettings } from "simple-uniswap-sdk";
 import { approvedChains } from "@/app/lib/approved-chains";
@@ -61,25 +60,26 @@ export async function POST(request: NextRequest) {
     .flatMap((quote: any, index: number) => {
       if (quote && quote.status !== "failure") {
         const token = allTokens[index];
-        const tokenMapKey = `1_${token}`;
+        const tokenMapKey = `${chain.id}_${token}`;
         const tokenData = BALANCES.tokenMap[tokenMapKey as keyof typeof BALANCES.tokenMap];
 
-        if (tokenData) {
-          return {
-            ...tokenData,
-            quoteUSDC: quote,
-          };
-        } else {
+        if (tokenData?.address == nativeWrappedToken?.contractAddress) {
           return {
             chainId: chain.id,
             address: null,
             name: chain.nativeCurrency.name,
             symbol: chain.nativeCurrency.symbol,
             decimals: chain.nativeCurrency.decimals,
-            logoURI: "https://token.partylabs.org/0x0000000000000000000000000000000000000000.webp",
+            logoURI: `https://chain.partylabs.org/${chain.id}.webp`,
+            quoteUSDC: quote,
+          };
+        } else if (tokenData) {
+          return {
+            ...tokenData,
             quoteUSDC: quote,
           };
         }
+        return null;
       } else {
         return null;
       }

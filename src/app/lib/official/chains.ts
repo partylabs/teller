@@ -6,7 +6,7 @@ export const CHAINS = {
   // [bsc.id]: bsc,
   // [polygon.id]: polygon,
   // [zkSync.id]: zkSync,
-  // [pulsechain.id]: pulsechain,
+  [pulsechain.id]: pulsechain,
   // [base.id]: base,
   // [arbitrum.id]: arbitrum,
 };

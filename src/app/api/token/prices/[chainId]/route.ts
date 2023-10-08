@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 import BALANCES from "@/app/models/balancelist.json";
 import { UniswapPair, UniswapPairSettings } from "simple-uniswap-sdk";
 import { CHAINS } from "@/app/lib/official/chains";
-import { DEXES } from "@/app/lib/approved-dexes";
+import { DEXES } from "@/app/lib/official/dexes";
 import { RPCS } from "@/app/lib/official/rpcs";
 
 export async function POST(request: NextRequest) {

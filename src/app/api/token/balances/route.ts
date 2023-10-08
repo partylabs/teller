@@ -4,7 +4,7 @@ import { CHAINS } from "@/app/lib/official/chains";
 import absoluteUrl from "next-absolute-url";
 
 export async function POST(request: NextRequest) {
-  const { origin } = absoluteUrl(request);
+  const { origin } = absoluteUrl(request as any);
   const { publicKeys } = await request.json();
 
   const chainIds = Object.keys(CHAINS);

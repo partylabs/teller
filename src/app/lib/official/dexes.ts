@@ -6,6 +6,12 @@ let ETH_ARB_OP_MATIC = new UniswapPairSettings();
 export const DEXES = {
   [mainnet.id]: new UniswapPairSettings({
     customNetwork: {
+      nameNetwork: "Ethereum",
+      multicallContractAddress: "0xcA11bde05977b3631167028862bE2a173976CA11",
+      nativeCurrency: {
+        name: "Ether",
+        symbol: "ETH",
+      },
       nativeWrappedTokenInfo: {
         chainId: mainnet.id as ChainId,
         contractAddress: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",

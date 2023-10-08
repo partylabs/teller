@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { CHAINS } from "@/app/lib/official/chains";
-import absoluteUrl from "next-absolute-url";
 
 export async function POST(request: NextRequest) {
-  const { origin } = absoluteUrl(request as any);
+  const { origin } = request.nextUrl;
   const { publicKeys } = await request.json();
 
   const chainIds = Object.keys(CHAINS);

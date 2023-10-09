@@ -1,6 +1,6 @@
 {
   "name": "party-tokens",
-  "timestamp": 1696650944353,
+  "timestamp": 1696815605446,
   "version": {
     "major": 1,
     "minor": 0,
@@ -137,6 +137,38 @@
       "logoURI": "https://token.partylabs.org/0x514910771af9ca656af840dff83e8264ecf986ca.webp"
     },
     {
+      "chainId": 10,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x4200000000000000000000000000000000000006.webp"
+    },
+    {
+      "chainId": 56,
+      "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.webp"
+    },
+    {
+      "chainId": 56,
+      "address": "0x20f663CEa80FaCE82ACDFA3aAE6862d246cE0333",
+      "name": "DRIP Token",
+      "symbol": "DRIP",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x20f663cea80face82acdfa3aae6862d246ce0333.webp"
+    },
+    {
+      "chainId": 137,
+      "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+      "name": "Wrapped Matic",
+      "symbol": "WMATIC",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270.webp"
+    },
+    {
       "chainId": 369,
       "address": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
       "name": "Wrapped Pulse",
@@ -183,6 +215,30 @@
       "symbol": "WBTC",
       "decimals": 8,
       "logoURI": "https://token.partylabs.org/0xb17d901469b9208b17d916112988a3fed19b5ca1.webp"
+    },
+    {
+      "chainId": 8453,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x4200000000000000000000000000000000000006.webp"
+    },
+    {
+      "chainId": 43114,
+      "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7.webp"
+    },
+    {
+      "chainId": 42161,
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x82af49447d8a07e3bd95bd0d56f35241523fbab1.webp"
     }
   ],
   "tokenMap": {
@@ -314,6 +370,38 @@
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x514910771af9ca656af840dff83e8264ecf986ca.webp"
     },
+    "10_0x4200000000000000000000000000000000000006": {
+      "chainId": 10,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x4200000000000000000000000000000000000006.webp"
+    },
+    "56_0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c": {
+      "chainId": 56,
+      "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.webp"
+    },
+    "56_0x20f663CEa80FaCE82ACDFA3aAE6862d246cE0333": {
+      "chainId": 56,
+      "address": "0x20f663CEa80FaCE82ACDFA3aAE6862d246cE0333",
+      "name": "DRIP Token",
+      "symbol": "DRIP",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x20f663cea80face82acdfa3aae6862d246ce0333.webp"
+    },
+    "137_0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270": {
+      "chainId": 137,
+      "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+      "name": "Wrapped Matic",
+      "symbol": "WMATIC",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270.webp"
+    },
     "369_0xA1077a294dDE1B09bB078844df40758a5D0f9a27": {
       "chainId": 369,
       "address": "0xA1077a294dDE1B09bB078844df40758a5D0f9a27",
@@ -361,6 +449,30 @@
       "symbol": "WBTC",
       "decimals": 8,
       "logoURI": "https://token.partylabs.org/0xb17d901469b9208b17d916112988a3fed19b5ca1.webp"
+    },
+    "8453_0x4200000000000000000000000000000000000006": {
+      "chainId": 8453,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x4200000000000000000000000000000000000006.webp"
+    },
+    "43114_0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7": {
+      "chainId": 43114,
+      "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7.webp"
+    },
+    "42161_0x82aF49447D8a07e3bd95BD0d56f35241523fBab1": {
+      "chainId": 42161,
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x82af49447d8a07e3bd95bd0d56f35241523fbab1.webp"
     }
   }
 }

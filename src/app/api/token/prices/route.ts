@@ -6,7 +6,14 @@ export async function POST(request: NextRequest) {
   const { origin } = request.nextUrl;
   const data = await request.json();
 
-  const chainIds = Object.keys(CHAINS);
+  const officialChainIds = Object.keys(CHAINS);
+  const chainIds = Object.keys(data);
+
+  chainIds.forEach((chainId) => {
+    if (!officialChainIds.includes(chainId)) {
+      delete data[chainId];
+    }
+  });
 
   const prices = await Promise.all(
     chainIds.flatMap(async (chainId) => {

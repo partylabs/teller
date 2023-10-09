@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import BALANCES from "@/app/models/balancelist.json";
-import { UniswapPair, UniswapPairSettings } from "simple-uniswap-sdk";
+import { UniswapPair } from "simple-uniswap-sdk";
 import { CHAINS } from "@/app/lib/official/chains";
 import { DEXES } from "@/app/lib/official/dexes";
 import { RPCS } from "@/app/lib/official/rpcs";
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
       const uniswapPairFactory = await uniswapPair.createFactory();
       try {
         const trade = await uniswapPairFactory.trade(SIZE.toString());
-        if (index === allTokens.length) {
+        if (index === allTokens.length - 1) {
           const nativeTokenQuote = SIZE / Number(trade.expectedConvertQuote);
           return nativeTokenQuote;
         }
@@ -63,14 +63,14 @@ export async function POST(request: NextRequest) {
         const tokenMapKey = `${chain.id}_${token}`;
         const tokenData = BALANCES.tokenMap[tokenMapKey as keyof typeof BALANCES.tokenMap];
 
-        if (tokenData?.address == nativeWrappedToken?.contractAddress) {
+        if (nativeWrappedToken && tokenData?.address == nativeWrappedToken?.contractAddress) {
           return {
             chainId: chain.id,
             address: null,
             name: chain.nativeCurrency.name,
             symbol: chain.nativeCurrency.symbol,
             decimals: chain.nativeCurrency.decimals,
-            logoURI: `https://chain.partylabs.org/${chain.id}.webp`,
+            logoURI: `https://chain.partylabs.org/${nativeWrappedToken.chainId}.webp`,
             quoteUSDC: quote,
           };
         } else if (tokenData) {

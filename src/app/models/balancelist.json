@@ -1,6 +1,6 @@
 {
   "name": "party-tokens",
-  "timestamp": 1696815605446,
+  "timestamp": 1696971007059,
   "version": {
     "major": 1,
     "minor": 0,
@@ -151,6 +151,14 @@
       "symbol": "WBNB",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.webp"
+    },
+    {
+      "chainId": 56,
+      "address": "0x20f663CEa80FaCE82ACDFA3aAE6862d246cE0333",
+      "name": "DRIP Token",
+      "symbol": "DRIP",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x20f663cea80face82acdfa3aae6862d246ce0333.webp"
     },
     {
       "chainId": 56,

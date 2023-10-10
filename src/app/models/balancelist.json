@@ -1,6 +1,6 @@
 {
   "name": "party-tokens",
-  "timestamp": 1696971007059,
+  "timestamp": 1696976187607,
   "version": {
     "major": 1,
     "minor": 0,
@@ -145,6 +145,22 @@
       "logoURI": "https://token.partylabs.org/0x4200000000000000000000000000000000000006.webp"
     },
     {
+      "chainId": 10,
+      "address": "0xeB585163DEbB1E637c6D617de3bEF99347cd75c8",
+      "name": "XEN Crypto",
+      "symbol": "opXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xeb585163debb1e637c6d617de3bef99347cd75c8.webp"
+    },
+    {
+      "chainId": 10,
+      "address": "0xc418B123885d732ED042b16e12e259741863F723",
+      "name": "DBXen Token on Optimism",
+      "symbol": "opDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc418b123885d732ed042b16e12e259741863f723.webp"
+    },
+    {
       "chainId": 56,
       "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
       "name": "Wrapped BNB",
@@ -162,11 +178,19 @@
     },
     {
       "chainId": 56,
-      "address": "0x20f663CEa80FaCE82ACDFA3aAE6862d246cE0333",
-      "name": "DRIP Token",
-      "symbol": "DRIP",
+      "address": "0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e",
+      "name": "XEN Crypto",
+      "symbol": "bXEN",
       "decimals": 18,
-      "logoURI": "https://token.partylabs.org/0x20f663cea80face82acdfa3aae6862d246ce0333.webp"
+      "logoURI": "https://token.partylabs.org/0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e.webp"
+    },
+    {
+      "chainId": 56,
+      "address": "0xCcd09b80453335aa914f5d9174984b6586c315EC",
+      "name": "DBXen Token on Binance",
+      "symbol": "bDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xccd09b80453335aa914f5d9174984b6586c315ec.webp"
     },
     {
       "chainId": 137,
@@ -175,6 +199,22 @@
       "symbol": "WMATIC",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270.webp"
+    },
+    {
+      "chainId": 137,
+      "address": "0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e",
+      "name": "XEN Crypto",
+      "symbol": "mXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e.webp"
+    },
+    {
+      "chainId": 137,
+      "address": "0x47DD60FA40A050c0677dE19921Eb4cc512947729",
+      "name": "DBXen Token on Polygon",
+      "symbol": "mDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x47dd60fa40a050c0677de19921eb4cc512947729.webp"
     },
     {
       "chainId": 369,
@@ -225,6 +265,14 @@
       "logoURI": "https://token.partylabs.org/0xb17d901469b9208b17d916112988a3fed19b5ca1.webp"
     },
     {
+      "chainId": 369,
+      "address": "0x8a7FDcA264e87b6da72D000f22186B4403081A2a",
+      "name": "XEN Crypto",
+      "symbol": "pXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x8a7fdca264e87b6da72d000f22186b4403081a2a.webp"
+    },
+    {
       "chainId": 8453,
       "address": "0x4200000000000000000000000000000000000006",
       "name": "Wrapped Ether",
@@ -233,12 +281,44 @@
       "logoURI": "https://token.partylabs.org/0x4200000000000000000000000000000000000006.webp"
     },
     {
+      "chainId": 8453,
+      "address": "0xffcbF84650cE02DaFE96926B37a0ac5E34932fa5",
+      "name": "XEN Crypto",
+      "symbol": "cbXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xffcbf84650ce02dafe96926b37a0ac5e34932fa5.webp"
+    },
+    {
+      "chainId": 8453,
+      "address": "0x9430A7e6283Fb704Fd1D9302868Bc39d16FE82Ba",
+      "name": "DBXen Token on Base",
+      "symbol": "cbDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x9430a7e6283fb704fd1d9302868bc39d16fe82ba.webp"
+    },
+    {
       "chainId": 43114,
       "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
       "name": "Wrapped AVAX",
       "symbol": "WAVAX",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7.webp"
+    },
+    {
+      "chainId": 43114,
+      "address": "0xC0C5AA69Dbe4d6DDdfBc89c0957686ec60F24389",
+      "name": "XEN Crypto",
+      "symbol": "aXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc0c5aa69dbe4d6dddfbc89c0957686ec60f24389.webp"
+    },
+    {
+      "chainId": 43114,
+      "address": "0x80f0C1c49891dcFDD40b6e0F960F84E6042bcB6F",
+      "name": "DBXen Token on Avalanche",
+      "symbol": "aDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x80f0c1c49891dcfdd40b6e0f960f84e6042bcb6f.webp"
     },
     {
       "chainId": 42161,
@@ -386,6 +466,22 @@
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x4200000000000000000000000000000000000006.webp"
     },
+    "10_0xeB585163DEbB1E637c6D617de3bEF99347cd75c8": {
+      "chainId": 10,
+      "address": "0xeB585163DEbB1E637c6D617de3bEF99347cd75c8",
+      "name": "XEN Crypto",
+      "symbol": "opXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xeb585163debb1e637c6d617de3bef99347cd75c8.webp"
+    },
+    "10_0xc418B123885d732ED042b16e12e259741863F723": {
+      "chainId": 10,
+      "address": "0xc418B123885d732ED042b16e12e259741863F723",
+      "name": "DBXen Token on Optimism",
+      "symbol": "opDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc418b123885d732ed042b16e12e259741863f723.webp"
+    },
     "56_0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c": {
       "chainId": 56,
       "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
@@ -402,6 +498,22 @@
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x20f663cea80face82acdfa3aae6862d246ce0333.webp"
     },
+    "56_0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e": {
+      "chainId": 56,
+      "address": "0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e",
+      "name": "XEN Crypto",
+      "symbol": "bXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e.webp"
+    },
+    "56_0xCcd09b80453335aa914f5d9174984b6586c315EC": {
+      "chainId": 56,
+      "address": "0xCcd09b80453335aa914f5d9174984b6586c315EC",
+      "name": "DBXen Token on Binance",
+      "symbol": "bDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xccd09b80453335aa914f5d9174984b6586c315ec.webp"
+    },
     "137_0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270": {
       "chainId": 137,
       "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
@@ -409,6 +521,22 @@
       "symbol": "WMATIC",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270.webp"
+    },
+    "137_0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e": {
+      "chainId": 137,
+      "address": "0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e",
+      "name": "XEN Crypto",
+      "symbol": "mXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e.webp"
+    },
+    "137_0x47DD60FA40A050c0677dE19921Eb4cc512947729": {
+      "chainId": 137,
+      "address": "0x47DD60FA40A050c0677dE19921Eb4cc512947729",
+      "name": "DBXen Token on Polygon",
+      "symbol": "mDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x47dd60fa40a050c0677de19921eb4cc512947729.webp"
     },
     "369_0xA1077a294dDE1B09bB078844df40758a5D0f9a27": {
       "chainId": 369,
@@ -458,6 +586,14 @@
       "decimals": 8,
       "logoURI": "https://token.partylabs.org/0xb17d901469b9208b17d916112988a3fed19b5ca1.webp"
     },
+    "369_0x8a7FDcA264e87b6da72D000f22186B4403081A2a": {
+      "chainId": 369,
+      "address": "0x8a7FDcA264e87b6da72D000f22186B4403081A2a",
+      "name": "XEN Crypto",
+      "symbol": "pXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x8a7fdca264e87b6da72d000f22186b4403081a2a.webp"
+    },
     "8453_0x4200000000000000000000000000000000000006": {
       "chainId": 8453,
       "address": "0x4200000000000000000000000000000000000006",
@@ -466,6 +602,22 @@
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x4200000000000000000000000000000000000006.webp"
     },
+    "8453_0xffcbF84650cE02DaFE96926B37a0ac5E34932fa5": {
+      "chainId": 8453,
+      "address": "0xffcbF84650cE02DaFE96926B37a0ac5E34932fa5",
+      "name": "XEN Crypto",
+      "symbol": "cbXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xffcbf84650ce02dafe96926b37a0ac5e34932fa5.webp"
+    },
+    "8453_0x9430A7e6283Fb704Fd1D9302868Bc39d16FE82Ba": {
+      "chainId": 8453,
+      "address": "0x9430A7e6283Fb704Fd1D9302868Bc39d16FE82Ba",
+      "name": "DBXen Token on Base",
+      "symbol": "cbDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x9430a7e6283fb704fd1d9302868bc39d16fe82ba.webp"
+    },
     "43114_0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7": {
       "chainId": 43114,
       "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
@@ -473,6 +625,22 @@
       "symbol": "WAVAX",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7.webp"
+    },
+    "43114_0xC0C5AA69Dbe4d6DDdfBc89c0957686ec60F24389": {
+      "chainId": 43114,
+      "address": "0xC0C5AA69Dbe4d6DDdfBc89c0957686ec60F24389",
+      "name": "XEN Crypto",
+      "symbol": "aXEN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc0c5aa69dbe4d6dddfbc89c0957686ec60f24389.webp"
+    },
+    "43114_0x80f0C1c49891dcFDD40b6e0F960F84E6042bcB6F": {
+      "chainId": 43114,
+      "address": "0x80f0C1c49891dcFDD40b6e0F960F84E6042bcB6F",
+      "name": "DBXen Token on Avalanche",
+      "symbol": "aDXN",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x80f0c1c49891dcfdd40b6e0f960f84e6042bcb6f.webp"
     },
     "42161_0x82aF49447D8a07e3bd95BD0d56f35241523fBab1": {
       "chainId": 42161,

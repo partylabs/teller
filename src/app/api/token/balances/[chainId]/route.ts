@@ -26,9 +26,11 @@ export async function POST(request: NextRequest) {
 
   const { publicKeys } = await request.json();
 
-  const tokens = BALANCES.tokens.map((token: any) => {
-    return token.address;
-  });
+  const tokenAddresses = BALANCES.tokens
+    .filter((token: any) => token.chainId === chain.id)
+    .map((token: any) => {
+      return token.address;
+    });
 
   let gasTokenBalances = await Promise.all(
     publicKeys.flatMap(async (publicKey: string) => {
@@ -54,9 +56,9 @@ export async function POST(request: NextRequest) {
 
   // for each publicKey, get all tokens balances
   let erc20Contracts = publicKeys.flatMap((publicKey: string) => {
-    return tokens.map((token: String) => {
+    return tokenAddresses.map((tokenAddress: String) => {
       return {
-        address: token,
+        address: tokenAddress,
         abi: ERC20,
         functionName: "balanceOf",
         args: [publicKey],
@@ -72,11 +74,10 @@ export async function POST(request: NextRequest) {
   const erc20Balances = erc20Contracts.map((contract: any, index: number) => {
     let result = results[index];
     if (result && result.status !== "failure" && result.result !== BigInt(0)) {
-      let tokenIndex = index % tokens.length;
-      let token = BALANCES.tokens[tokenIndex];
+      const tokenMapKey = `${chainId}_${contract.address}`;
+      const tokenData = BALANCES.tokenMap[tokenMapKey as keyof typeof BALANCES.tokenMap];
       return {
-        ...token,
-        chainId: chain.id,
+        ...tokenData,
         publicKey: contract.args[0],
         address: contract.address,
         units: result.result?.toString() ?? "0",

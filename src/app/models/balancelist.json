@@ -1,6 +1,6 @@
 {
   "name": "party-tokens",
-  "timestamp": 1696976187607,
+  "timestamp": 1697044406880,
   "version": {
     "major": 1,
     "minor": 0,
@@ -106,14 +106,6 @@
     },
     {
       "chainId": 1,
-      "address": "0x3819f64f282bf135d62168C1e513280dAF905e06",
-      "name": "Hedron",
-      "symbol": "HDRN",
-      "decimals": 9,
-      "logoURI": "https://token.partylabs.org/0x3819f64f282bf135d62168c1e513280daf905e06.webp"
-    },
-    {
-      "chainId": 1,
       "address": "0xE9F721E7419423f11863e83DbD710b5D6127b5b0",
       "name": "ePhiat",
       "symbol": "ePhiat",
@@ -135,6 +127,70 @@
       "symbol": "LINK",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x514910771af9ca656af840dff83e8264ecf986ca.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x3819f64f282bf135d62168C1e513280dAF905e06",
+      "name": "Hedron",
+      "symbol": "HDRN",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0x3819f64f282bf135d62168c1e513280daf905e06.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xB7c9E99Da8A857cE576A830A9c19312114d9dE02",
+      "name": "Maximus Team",
+      "symbol": "TEAM",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xb7c9e99da8a857ce576a830a9c19312114d9de02.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xe9f84d418B008888A992Ff8c6D22389C2C3504e0",
+      "name": "Maximus Base",
+      "symbol": "BASE",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xe9f84d418b008888a992ff8c6d22389c2c3504e0.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xF55cD1e399e1cc3D95303048897a680be3313308",
+      "name": "Maximus Trio",
+      "symbol": "TRIO",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xf55cd1e399e1cc3d95303048897a680be3313308.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x6B0956258fF7bd7645aa35369B55B61b8e6d6140",
+      "name": "Maximus Lucky",
+      "symbol": "LUCKY",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x6b0956258ff7bd7645aa35369b55b61b8e6d6140.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x6b32022693210cD2Cfc466b9Ac0085DE8fC34eA6",
+      "name": "Maximus Decimus",
+      "symbol": "DECI",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x6b32022693210cd2cfc466b9ac0085de8fc34ea6.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xfc4913214444aF5c715cc9F7b52655e788A569ed",
+      "name": "Icosa",
+      "symbol": "ICSA",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0xfc4913214444af5c715cc9f7b52655e788a569ed.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x0d86EB9f43C57f6FF3BC9E23D8F9d82503f0e84b",
+      "name": "Maximus",
+      "symbol": "MAXI",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x0d86eb9f43c57f6ff3bc9e23d8f9d82503f0e84b.webp"
     },
     {
       "chainId": 10,
@@ -193,6 +249,14 @@
       "logoURI": "https://token.partylabs.org/0xccd09b80453335aa914f5d9174984b6586c315ec.webp"
     },
     {
+      "chainId": 56,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "bFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
+    },
+    {
       "chainId": 137,
       "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
       "name": "Wrapped Matic",
@@ -215,6 +279,14 @@
       "symbol": "mDXN",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x47dd60fa40a050c0677de19921eb4cc512947729.webp"
+    },
+    {
+      "chainId": 137,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "mFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
     },
     {
       "chainId": 369,
@@ -273,6 +345,78 @@
       "logoURI": "https://token.partylabs.org/0x8a7fdca264e87b6da72d000f22186b4403081a2a.webp"
     },
     {
+      "chainId": 369,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "pFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x3819f64f282bf135d62168C1e513280dAF905e06",
+      "name": "Hedron",
+      "symbol": "HDRN",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0x3819f64f282bf135d62168c1e513280daf905e06.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0xB7c9E99Da8A857cE576A830A9c19312114d9dE02",
+      "name": "Maximus Team",
+      "symbol": "TEAM",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xb7c9e99da8a857ce576a830a9c19312114d9de02.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0xe9f84d418B008888A992Ff8c6D22389C2C3504e0",
+      "name": "Maximus Base",
+      "symbol": "BASE",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xe9f84d418b008888a992ff8c6d22389c2c3504e0.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0xF55cD1e399e1cc3D95303048897a680be3313308",
+      "name": "Maximus Trio",
+      "symbol": "TRIO",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xf55cd1e399e1cc3d95303048897a680be3313308.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x6B0956258fF7bd7645aa35369B55B61b8e6d6140",
+      "name": "Maximus Lucky",
+      "symbol": "LUCKY",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x6b0956258ff7bd7645aa35369b55b61b8e6d6140.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x6b32022693210cD2Cfc466b9Ac0085DE8fC34eA6",
+      "name": "Maximus Decimus",
+      "symbol": "DECI",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x6b32022693210cd2cfc466b9ac0085de8fc34ea6.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0xfc4913214444aF5c715cc9F7b52655e788A569ed",
+      "name": "Icosa",
+      "symbol": "ICSA",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0xfc4913214444af5c715cc9f7b52655e788a569ed.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x0d86EB9f43C57f6FF3BC9E23D8F9d82503f0e84b",
+      "name": "Maximus",
+      "symbol": "MAXI",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x0d86eb9f43c57f6ff3bc9e23d8f9d82503f0e84b.webp"
+    },
+    {
       "chainId": 8453,
       "address": "0x4200000000000000000000000000000000000006",
       "name": "Wrapped Ether",
@@ -297,6 +441,14 @@
       "logoURI": "https://token.partylabs.org/0x9430a7e6283fb704fd1d9302868bc39d16fe82ba.webp"
     },
     {
+      "chainId": 8453,
+      "address": "0x07FdE3eD7727c1D84171A6e5815964d50827CF69",
+      "name": "FENIX",
+      "symbol": "cbFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x07fde3ed7727c1d84171a6e5815964d50827cf69.webp"
+    },
+    {
       "chainId": 43114,
       "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
       "name": "Wrapped AVAX",
@@ -319,6 +471,14 @@
       "symbol": "aDXN",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x80f0c1c49891dcfdd40b6e0f960f84e6042bcb6f.webp"
+    },
+    {
+      "chainId": 43114,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "aFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
     },
     {
       "chainId": 42161,
@@ -426,14 +586,6 @@
       "decimals": 8,
       "logoURI": "https://token.partylabs.org/0x2b591e99afe9f32eaa6214f7b7629768c40eeb39.webp"
     },
-    "1_0x3819f64f282bf135d62168C1e513280dAF905e06": {
-      "chainId": 1,
-      "address": "0x3819f64f282bf135d62168C1e513280dAF905e06",
-      "name": "Hedron",
-      "symbol": "HDRN",
-      "decimals": 9,
-      "logoURI": "https://token.partylabs.org/0x3819f64f282bf135d62168c1e513280daf905e06.webp"
-    },
     "1_0xE9F721E7419423f11863e83DbD710b5D6127b5b0": {
       "chainId": 1,
       "address": "0xE9F721E7419423f11863e83DbD710b5D6127b5b0",
@@ -457,6 +609,70 @@
       "symbol": "LINK",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x514910771af9ca656af840dff83e8264ecf986ca.webp"
+    },
+    "1_0x3819f64f282bf135d62168C1e513280dAF905e06": {
+      "chainId": 1,
+      "address": "0x3819f64f282bf135d62168C1e513280dAF905e06",
+      "name": "Hedron",
+      "symbol": "HDRN",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0x3819f64f282bf135d62168c1e513280daf905e06.webp"
+    },
+    "1_0xB7c9E99Da8A857cE576A830A9c19312114d9dE02": {
+      "chainId": 1,
+      "address": "0xB7c9E99Da8A857cE576A830A9c19312114d9dE02",
+      "name": "Maximus Team",
+      "symbol": "TEAM",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xb7c9e99da8a857ce576a830a9c19312114d9de02.webp"
+    },
+    "1_0xe9f84d418B008888A992Ff8c6D22389C2C3504e0": {
+      "chainId": 1,
+      "address": "0xe9f84d418B008888A992Ff8c6D22389C2C3504e0",
+      "name": "Maximus Base",
+      "symbol": "BASE",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xe9f84d418b008888a992ff8c6d22389c2c3504e0.webp"
+    },
+    "1_0xF55cD1e399e1cc3D95303048897a680be3313308": {
+      "chainId": 1,
+      "address": "0xF55cD1e399e1cc3D95303048897a680be3313308",
+      "name": "Maximus Trio",
+      "symbol": "TRIO",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xf55cd1e399e1cc3d95303048897a680be3313308.webp"
+    },
+    "1_0x6B0956258fF7bd7645aa35369B55B61b8e6d6140": {
+      "chainId": 1,
+      "address": "0x6B0956258fF7bd7645aa35369B55B61b8e6d6140",
+      "name": "Maximus Lucky",
+      "symbol": "LUCKY",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x6b0956258ff7bd7645aa35369b55b61b8e6d6140.webp"
+    },
+    "1_0x6b32022693210cD2Cfc466b9Ac0085DE8fC34eA6": {
+      "chainId": 1,
+      "address": "0x6b32022693210cD2Cfc466b9Ac0085DE8fC34eA6",
+      "name": "Maximus Decimus",
+      "symbol": "DECI",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x6b32022693210cd2cfc466b9ac0085de8fc34ea6.webp"
+    },
+    "1_0xfc4913214444aF5c715cc9F7b52655e788A569ed": {
+      "chainId": 1,
+      "address": "0xfc4913214444aF5c715cc9F7b52655e788A569ed",
+      "name": "Icosa",
+      "symbol": "ICSA",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0xfc4913214444af5c715cc9f7b52655e788a569ed.webp"
+    },
+    "1_0x0d86EB9f43C57f6FF3BC9E23D8F9d82503f0e84b": {
+      "chainId": 1,
+      "address": "0x0d86EB9f43C57f6FF3BC9E23D8F9d82503f0e84b",
+      "name": "Maximus",
+      "symbol": "MAXI",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x0d86eb9f43c57f6ff3bc9e23d8f9d82503f0e84b.webp"
     },
     "10_0x4200000000000000000000000000000000000006": {
       "chainId": 10,
@@ -514,6 +730,14 @@
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0xccd09b80453335aa914f5d9174984b6586c315ec.webp"
     },
+    "56_0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055": {
+      "chainId": 56,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "bFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
+    },
     "137_0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270": {
       "chainId": 137,
       "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
@@ -537,6 +761,14 @@
       "symbol": "mDXN",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x47dd60fa40a050c0677de19921eb4cc512947729.webp"
+    },
+    "137_0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055": {
+      "chainId": 137,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "mFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
     },
     "369_0xA1077a294dDE1B09bB078844df40758a5D0f9a27": {
       "chainId": 369,
@@ -594,6 +826,78 @@
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x8a7fdca264e87b6da72d000f22186b4403081a2a.webp"
     },
+    "369_0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055": {
+      "chainId": 369,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "pFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
+    },
+    "369_0x3819f64f282bf135d62168C1e513280dAF905e06": {
+      "chainId": 369,
+      "address": "0x3819f64f282bf135d62168C1e513280dAF905e06",
+      "name": "Hedron",
+      "symbol": "HDRN",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0x3819f64f282bf135d62168c1e513280daf905e06.webp"
+    },
+    "369_0xB7c9E99Da8A857cE576A830A9c19312114d9dE02": {
+      "chainId": 369,
+      "address": "0xB7c9E99Da8A857cE576A830A9c19312114d9dE02",
+      "name": "Maximus Team",
+      "symbol": "TEAM",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xb7c9e99da8a857ce576a830a9c19312114d9de02.webp"
+    },
+    "369_0xe9f84d418B008888A992Ff8c6D22389C2C3504e0": {
+      "chainId": 369,
+      "address": "0xe9f84d418B008888A992Ff8c6D22389C2C3504e0",
+      "name": "Maximus Base",
+      "symbol": "BASE",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xe9f84d418b008888a992ff8c6d22389c2c3504e0.webp"
+    },
+    "369_0xF55cD1e399e1cc3D95303048897a680be3313308": {
+      "chainId": 369,
+      "address": "0xF55cD1e399e1cc3D95303048897a680be3313308",
+      "name": "Maximus Trio",
+      "symbol": "TRIO",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0xf55cd1e399e1cc3d95303048897a680be3313308.webp"
+    },
+    "369_0x6B0956258fF7bd7645aa35369B55B61b8e6d6140": {
+      "chainId": 369,
+      "address": "0x6B0956258fF7bd7645aa35369B55B61b8e6d6140",
+      "name": "Maximus Lucky",
+      "symbol": "LUCKY",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x6b0956258ff7bd7645aa35369b55b61b8e6d6140.webp"
+    },
+    "369_0x6b32022693210cD2Cfc466b9Ac0085DE8fC34eA6": {
+      "chainId": 369,
+      "address": "0x6b32022693210cD2Cfc466b9Ac0085DE8fC34eA6",
+      "name": "Maximus Decimus",
+      "symbol": "DECI",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x6b32022693210cd2cfc466b9ac0085de8fc34ea6.webp"
+    },
+    "369_0xfc4913214444aF5c715cc9F7b52655e788A569ed": {
+      "chainId": 369,
+      "address": "0xfc4913214444aF5c715cc9F7b52655e788A569ed",
+      "name": "Icosa",
+      "symbol": "ICSA",
+      "decimals": 9,
+      "logoURI": "https://token.partylabs.org/0xfc4913214444af5c715cc9f7b52655e788a569ed.webp"
+    },
+    "369_0x0d86EB9f43C57f6FF3BC9E23D8F9d82503f0e84b": {
+      "chainId": 369,
+      "address": "0x0d86EB9f43C57f6FF3BC9E23D8F9d82503f0e84b",
+      "name": "Maximus",
+      "symbol": "MAXI",
+      "decimals": 8,
+      "logoURI": "https://token.partylabs.org/0x0d86eb9f43c57f6ff3bc9e23d8f9d82503f0e84b.webp"
+    },
     "8453_0x4200000000000000000000000000000000000006": {
       "chainId": 8453,
       "address": "0x4200000000000000000000000000000000000006",
@@ -618,6 +922,14 @@
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x9430a7e6283fb704fd1d9302868bc39d16fe82ba.webp"
     },
+    "8453_0x07FdE3eD7727c1D84171A6e5815964d50827CF69": {
+      "chainId": 8453,
+      "address": "0x07FdE3eD7727c1D84171A6e5815964d50827CF69",
+      "name": "FENIX",
+      "symbol": "cbFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x07fde3ed7727c1d84171a6e5815964d50827cf69.webp"
+    },
     "43114_0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7": {
       "chainId": 43114,
       "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
@@ -641,6 +953,14 @@
       "symbol": "aDXN",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0x80f0c1c49891dcfdd40b6e0f960f84e6042bcb6f.webp"
+    },
+    "43114_0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055": {
+      "chainId": 43114,
+      "address": "0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055",
+      "name": "FENIX",
+      "symbol": "aFENIX",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xc3e8abfa04b0ec442c2a4d65699a40f7fced8055.webp"
     },
     "42161_0x82aF49447D8a07e3bd95BD0d56f35241523fBab1": {
       "chainId": 42161,

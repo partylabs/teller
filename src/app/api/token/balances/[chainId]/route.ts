@@ -6,12 +6,15 @@ import ERC20 from "@/app/models/abi/ERC20.json";
 import { BalanceOfResult } from "@/app/lib/types";
 import { CHAINS } from "@/app/lib/official/chains";
 import { RPCS } from "@/app/lib/official/rpcs";
+import { DEXES } from "@/app/lib/official/dexes";
 
 export async function POST(request: NextRequest) {
   const chainId = request.url.split("/").pop();
 
   let chain = CHAINS[chainId as unknown as keyof typeof CHAINS];
   let providerUrl = RPCS[chainId as unknown as keyof typeof RPCS];
+  let dexSettings = DEXES[chainId as unknown as keyof typeof DEXES];
+  let nativeWrappedToken = dexSettings.customNetwork?.nativeWrappedTokenInfo;
 
   if (chain == null) {
     return NextResponse.json([], { status: 200 });
@@ -46,7 +49,7 @@ export async function POST(request: NextRequest) {
           chainId: chain.id,
           address: null,
           ...chain.nativeCurrency,
-          logoURI: `https://chain.partylabs.org/${chain.id}.webp`,
+          logoURI: `https://chain.partylabs.org/${nativeWrappedToken?.chainId ?? chain.id}.webp`,
           publicKey: publicKey,
           units: balance.toString(),
         };

@@ -1,6 +1,6 @@
 {
   "name": "party-tokens",
-  "timestamp": 1697044406880,
+  "timestamp": 1697417030153,
   "version": {
     "major": 1,
     "minor": 0,
@@ -415,6 +415,30 @@
       "symbol": "MAXI",
       "decimals": 8,
       "logoURI": "https://token.partylabs.org/0x0d86eb9f43c57f6ff3bc9e23d8f9d82503f0e84b.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07",
+      "name": "USD Coin from Ethereum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://token.partylabs.org/0x15d38573d2feeb82e7ad5187ab8c1d52810b1f07.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f",
+      "name": "Tether USD from Ethereum",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://token.partylabs.org/0x0cb6f5a34ad42ec934882a05265a7d5f59b51a2f.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0xefD766cCb38EaF1dfd701853BFCe31359239F305",
+      "name": "Dai Stablecoin from Ethereum",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xefd766ccb38eaf1dfd701853bfce31359239f305.webp"
     },
     {
       "chainId": 8453,
@@ -897,6 +921,30 @@
       "symbol": "MAXI",
       "decimals": 8,
       "logoURI": "https://token.partylabs.org/0x0d86eb9f43c57f6ff3bc9e23d8f9d82503f0e84b.webp"
+    },
+    "369_0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07": {
+      "chainId": 369,
+      "address": "0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07",
+      "name": "USD Coin from Ethereum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://token.partylabs.org/0x15d38573d2feeb82e7ad5187ab8c1d52810b1f07.webp"
+    },
+    "369_0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f": {
+      "chainId": 369,
+      "address": "0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f",
+      "name": "Tether USD from Ethereum",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://token.partylabs.org/0x0cb6f5a34ad42ec934882a05265a7d5f59b51a2f.webp"
+    },
+    "369_0xefD766cCb38EaF1dfd701853BFCe31359239F305": {
+      "chainId": 369,
+      "address": "0xefD766cCb38EaF1dfd701853BFCe31359239F305",
+      "name": "Dai Stablecoin from Ethereum",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xefd766ccb38eaf1dfd701853bfce31359239f305.webp"
     },
     "8453_0x4200000000000000000000000000000000000006": {
       "chainId": 8453,

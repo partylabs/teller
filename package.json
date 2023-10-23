@@ -16,7 +16,7 @@
     "react-dom": "^18",
     "simple-uniswap-sdk": "^3.7.0",
     "utf-8-validate": "^6.0.3",
-    "viem": "^1.15.1"
+    "viem": "^1.16.6"
   },
   "devDependencies": {
     "@types/node": "^20",

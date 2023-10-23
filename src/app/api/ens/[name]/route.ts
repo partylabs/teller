@@ -1,7 +1,7 @@
 import { RPCS } from "@/app/lib/official/rpcs";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { createPublicClient, getAddress, http, isAddress } from "viem";
+import { createPublicClient, http } from "viem";
 import { mainnet } from "viem/chains";
 import { normalize } from "viem/ens";
 

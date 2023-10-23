@@ -1,6 +1,6 @@
 {
   "name": "party-tokens",
-  "timestamp": 1697417030153,
+  "timestamp": 1698028537809,
   "version": {
     "major": 1,
     "minor": 0,
@@ -191,6 +191,78 @@
       "symbol": "MAXI",
       "decimals": 8,
       "logoURI": "https://token.partylabs.org/0x0d86eb9f43c57f6ff3bc9e23d8f9d82503f0e84b.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07",
+      "name": "OMGToken",
+      "symbol": "OMG",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xd26114cd6ee289accf82350c8d8487fedb8a0c07.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xba5BDe662c17e2aDFF1075610382B9B691296350",
+      "name": "SuperRare",
+      "symbol": "RARE",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xba5bde662c17e2adff1075610382b9b691296350.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xae78736Cd615f374D3085123A210448E74Fc6393",
+      "name": "Rocket Pool ETH",
+      "symbol": "rETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xae78736cd615f374d3085123a210448e74fc6393.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
+      "name": "Rocket Pool Protocol",
+      "symbol": "RPL",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xd33526068d116ce69f19a9ee46f0bd304f21a51f.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x8ca5Bb317f73Fcd8A9F7d122C14B9a1F87688230",
+      "name": "SocialAI",
+      "symbol": "sAI",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x8ca5bb317f73fcd8a9f7d122c14b9a1f87688230.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xFe2e637202056d30016725477c5da089Ab0A043A",
+      "name": "StakeWise Staked ETH2",
+      "symbol": "sETH2",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xfe2e637202056d30016725477c5da089ab0a043a.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
+      "name": "Status Network Token",
+      "symbol": "SNT",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x744d70fdbe2ba4cf95131626614a1763df805b9e.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+      "name": "Liquid staked Ether 2.0",
+      "symbol": "stETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xae7ab96520de3a18e5e111b5eaab095312d7fe84.webp"
+    },
+    {
+      "chainId": 1,
+      "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "name": "Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0.webp"
     },
     {
       "chainId": 10,
@@ -439,6 +511,14 @@
       "symbol": "DAI",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0xefd766ccb38eaf1dfd701853bfce31359239f305.webp"
+    },
+    {
+      "chainId": 369,
+      "address": "0x02DcdD04e3F455D838cd1249292C58f3B79e3C3C",
+      "name": "Wrapped Ether from Ethereum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x02dcdd04e3f455d838cd1249292c58f3b79e3c3c.webp"
     },
     {
       "chainId": 8453,
@@ -698,6 +778,78 @@
       "decimals": 8,
       "logoURI": "https://token.partylabs.org/0x0d86eb9f43c57f6ff3bc9e23d8f9d82503f0e84b.webp"
     },
+    "1_0xd26114cd6EE289AccF82350c8d8487fedB8A0C07": {
+      "chainId": 1,
+      "address": "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07",
+      "name": "OMGToken",
+      "symbol": "OMG",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xd26114cd6ee289accf82350c8d8487fedb8a0c07.webp"
+    },
+    "1_0xba5BDe662c17e2aDFF1075610382B9B691296350": {
+      "chainId": 1,
+      "address": "0xba5BDe662c17e2aDFF1075610382B9B691296350",
+      "name": "SuperRare",
+      "symbol": "RARE",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xba5bde662c17e2adff1075610382b9b691296350.webp"
+    },
+    "1_0xae78736Cd615f374D3085123A210448E74Fc6393": {
+      "chainId": 1,
+      "address": "0xae78736Cd615f374D3085123A210448E74Fc6393",
+      "name": "Rocket Pool ETH",
+      "symbol": "rETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xae78736cd615f374d3085123a210448e74fc6393.webp"
+    },
+    "1_0xD33526068D116cE69F19A9ee46F0bd304F21A51f": {
+      "chainId": 1,
+      "address": "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
+      "name": "Rocket Pool Protocol",
+      "symbol": "RPL",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xd33526068d116ce69f19a9ee46f0bd304f21a51f.webp"
+    },
+    "1_0x8ca5Bb317f73Fcd8A9F7d122C14B9a1F87688230": {
+      "chainId": 1,
+      "address": "0x8ca5Bb317f73Fcd8A9F7d122C14B9a1F87688230",
+      "name": "SocialAI",
+      "symbol": "sAI",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x8ca5bb317f73fcd8a9f7d122c14b9a1f87688230.webp"
+    },
+    "1_0xFe2e637202056d30016725477c5da089Ab0A043A": {
+      "chainId": 1,
+      "address": "0xFe2e637202056d30016725477c5da089Ab0A043A",
+      "name": "StakeWise Staked ETH2",
+      "symbol": "sETH2",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xfe2e637202056d30016725477c5da089ab0a043a.webp"
+    },
+    "1_0x744d70FDBE2Ba4CF95131626614a1763DF805B9E": {
+      "chainId": 1,
+      "address": "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
+      "name": "Status Network Token",
+      "symbol": "SNT",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x744d70fdbe2ba4cf95131626614a1763df805b9e.webp"
+    },
+    "1_0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84": {
+      "chainId": 1,
+      "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+      "name": "Liquid staked Ether 2.0",
+      "symbol": "stETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0xae7ab96520de3a18e5e111b5eaab095312d7fe84.webp"
+    },
+    "1_0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0": {
+      "chainId": 1,
+      "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "name": "Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0.webp"
+    },
     "10_0x4200000000000000000000000000000000000006": {
       "chainId": 10,
       "address": "0x4200000000000000000000000000000000000006",
@@ -945,6 +1097,14 @@
       "symbol": "DAI",
       "decimals": 18,
       "logoURI": "https://token.partylabs.org/0xefd766ccb38eaf1dfd701853bfce31359239f305.webp"
+    },
+    "369_0x02DcdD04e3F455D838cd1249292C58f3B79e3C3C": {
+      "chainId": 369,
+      "address": "0x02DcdD04e3F455D838cd1249292C58f3B79e3C3C",
+      "name": "Wrapped Ether from Ethereum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://token.partylabs.org/0x02dcdd04e3f455d838cd1249292c58f3b79e3c3c.webp"
     },
     "8453_0x4200000000000000000000000000000000000006": {
       "chainId": 8453,

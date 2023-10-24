@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextRequest } from "next/server";
 import { createPublicClient, getAddress, http, formatEther } from "viem";
 import { mainnet } from "viem/chains";
 import FENIX_ABI from "@/app/models/abi/fenix.json";
 import { calculateEarlyPayout, calculateLatePayout } from "@/app/lib/fenix-helpers";
 import { CHAINS } from "@/app/lib/official/chains";
 import { RPCS } from "@/app/lib/official/rpcs";
+import { FENIX_ADDRESS } from "@/app/lib/official/protocols/fenix";
 
 (BigInt.prototype as any).toJSON = function () {
   return this.toString();
@@ -16,20 +17,23 @@ export async function POST(request: NextRequest) {
 
   let chain = CHAINS[chainId as unknown as keyof typeof CHAINS];
   let providerUrl = RPCS[chainId as unknown as keyof typeof RPCS];
+  let fenixContractAddress = FENIX_ADDRESS[chainId as unknown as keyof typeof FENIX_ADDRESS];
 
   if (chain == null) {
-    return NextResponse.json([], { status: 200 });
+    return NextResponse.json({ error: "Invalid chain" }, { status: 200 });
   } else if (providerUrl == null) {
-    return NextResponse.json("Provider not set", { status: 400 });
+    return NextResponse.json({ error: "Provider not set" }, { status: 400 });
+  } else if (fenixContractAddress == null) {
+    return NextResponse.json({ error: `FENIX address not set on ${chain.name}` }, { status: 400 });
   }
 
   const fenixContract = {
-    address: getAddress("0xC3e8abfA04B0EC442c2A4D65699a40F7FcEd8055"),
+    address: fenixContractAddress,
     abi: FENIX_ABI,
   };
 
   const client = createPublicClient({
-    chain: mainnet,
+    chain: chain,
     transport: http(),
   });
 
@@ -38,7 +42,6 @@ export async function POST(request: NextRequest) {
   // Get global variables
 
   const globalFunctions = ["genesisTs", "shareRate", "equityPoolSupply", "equityPoolTotalShares", "rewardPoolSupply"];
-
   const globalFunctionContracts = globalFunctions.map((functionName: string) => {
     return {
       ...fenixContract,
@@ -46,12 +49,10 @@ export async function POST(request: NextRequest) {
     };
   });
 
-  console.log(globalFunctionContracts);
   const [genesisTs, shareRate, equityPoolSupply, equityPoolTotalShares, rewardPoolSupply] = await client.multicall({
     contracts: globalFunctionContracts,
   });
 
-  console.log(genesisTs, shareRate, equityPoolSupply, equityPoolTotalShares, rewardPoolSupply);
   const fenixCountsContracts = publicKeys.map((publicKey: string) => {
     return {
       ...fenixContract,
@@ -68,7 +69,7 @@ export async function POST(request: NextRequest) {
     const count = fenixStakeCounts[index].result as bigint;
 
     if (count === BigInt(0)) {
-      return;
+      return [];
     }
 
     let fenixStakesContracts = [];
@@ -86,7 +87,9 @@ export async function POST(request: NextRequest) {
     return fenixStakesContracts;
   });
 
-  // console.log(fenixStakesContracts);
+  if (fenixStakesContracts.length == 0) {
+    return NextResponse.json([], { status: 200 });
+  }
 
   const fenixStakes = await client.multicall({
     contracts: fenixStakesContracts.map((contract: any) => contract.fenixStakesContracts).flat(),
@@ -96,7 +99,6 @@ export async function POST(request: NextRequest) {
 
   let results = fenixStakesContracts.flatMap((contract: any, index: number) => {
     const stake = fenixStakes[index].result as any;
-
     const currentTs = Date.now() / 1000;
 
     let penalty = 0;
@@ -121,6 +123,7 @@ export async function POST(request: NextRequest) {
 
     return {
       publicKey: publicKey,
+      chainId: chain.id,
       stakeId: stakeId,
       projectedPayout: projectedPayout,
       stake: {
@@ -137,4 +140,6 @@ export async function POST(request: NextRequest) {
   });
 
   return NextResponse.json(results, { status: 200 });
+
+  // return NextResponse.json([], { status: 200 });
 }

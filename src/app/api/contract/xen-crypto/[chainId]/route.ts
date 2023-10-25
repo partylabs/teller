@@ -24,13 +24,13 @@ export async function POST(request: NextRequest) {
   }
 
   const xenCryptoContract = {
-    address: getAddress("0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8"),
+    address: xenCryptoContractAddress,
     abi: XEN_CRYPTO_ABI as Abi,
   };
 
   const client = createPublicClient({
-    chain: mainnet,
-    transport: http(),
+    chain: chain,
+    transport: http(providerUrl),
   });
 
   const { publicKeys } = await request.json();
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
 
   const mintResults = xenMintsStakes
     .filter((_, index) => index % 2 === 0)
-    .map((mint, index) => {
+    .flatMap((mint, index) => {
       const mintResult = mint.result as [string, bigint, bigint, bigint, bigint, bigint] | null;
       if (mintResult === null) {
         return [];
@@ -81,10 +81,15 @@ export async function POST(request: NextRequest) {
         eaaRate: mintResult[5],
       };
 
+      if (xenCryptoMint.term === BigInt(0)) {
+        return [];
+      }
+
       const estimatedYield = mintYield(gRank, xenCryptoMint);
 
       return {
         publicKey: publicKeys[index],
+        chainId: chain.id,
         mintYield: estimatedYield,
         mint: xenCryptoMint,
       };
@@ -92,7 +97,7 @@ export async function POST(request: NextRequest) {
 
   const stakeResults = xenMintsStakes
     .filter((_, index) => index % 2 !== 0)
-    .map((stake, index) => {
+    .flatMap((stake, index) => {
       const stakeResult = stake.result as [bigint, bigint, bigint, bigint] | null;
       if (stakeResult === null) {
         return [];
@@ -104,14 +109,31 @@ export async function POST(request: NextRequest) {
         apy: stakeResult[3],
       };
 
+      if (xenCryptoStake.term === BigInt(0)) {
+        return [];
+      }
+
       const estimatedYield = stakeYield(xenCryptoStake);
 
       return {
         publicKey: publicKeys[index],
+        chainId: chain.id,
         stakeYield: estimatedYield,
         stake: xenCryptoStake,
       };
     });
 
-  return NextResponse.json({ mints: mintResults, stakes: stakeResults }, { status: 200 });
+  let responseResults: any = {};
+  if (mintResults.length !== 0) {
+    responseResults["mints"] = mintResults;
+  }
+  if (stakeResults.length !== 0) {
+    responseResults["stakes"] = stakeResults;
+  }
+
+  if (Object.keys(responseResults).length === 0) {
+    return NextResponse.json([], { status: 200 });
+  }
+
+  return NextResponse.json(responseResults, { status: 200 });
 }

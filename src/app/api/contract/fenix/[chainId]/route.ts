@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
 
   const client = createPublicClient({
     chain: chain,
-    transport: http(),
+    transport: http(providerUrl),
   });
 
   const { publicKeys } = await request.json();

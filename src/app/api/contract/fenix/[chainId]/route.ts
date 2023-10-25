@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
-import { createPublicClient, getAddress, http, formatEther } from "viem";
+import { createPublicClient, getAddress, http, formatEther, Abi } from "viem";
 import { mainnet } from "viem/chains";
 import FENIX_ABI from "@/app/models/abi/fenix.json";
 import { calculateEarlyPayout, calculateLatePayout } from "@/app/lib/fenix-helpers";
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
   const fenixContract = {
     address: fenixContractAddress,
-    abi: FENIX_ABI,
+    abi: FENIX_ABI as Abi,
   };
 
   const client = createPublicClient({

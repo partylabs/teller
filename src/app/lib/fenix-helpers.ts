@@ -7,7 +7,18 @@ export const enum StakeStatus {
   ALL = 3,
 }
 
-export const calculateEarlyPayout = (stake: any, blockTs: number) => {
+export interface FENIXStake {
+  status: StakeStatus;
+  startTs: number;
+  deferralTs: number;
+  endTs: number;
+  term: number;
+  fenix: number;
+  shares: number;
+  payout: number;
+}
+
+export const calculateEarlyPayout = (stake: FENIXStake, blockTs: number) => {
   if (blockTs < stake.startTs || stake.status != StakeStatus.ACTIVE) return null;
   if (blockTs > stake.endTs) return null;
 
@@ -17,7 +28,7 @@ export const calculateEarlyPayout = (stake: any, blockTs: number) => {
   return Math.pow(ratio, 2);
 };
 
-export const calculateLatePayout = (stake: any, blockTs: number) => {
+export const calculateLatePayout = (stake: FENIXStake, blockTs: number) => {
   if (blockTs < stake.startTs || stake.status != StakeStatus.ACTIVE) return null;
   if (blockTs < stake.endTs) return null;
 

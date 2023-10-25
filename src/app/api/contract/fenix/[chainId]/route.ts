@@ -3,7 +3,7 @@ import { NextRequest } from "next/server";
 import { createPublicClient, getAddress, http, formatEther, Abi } from "viem";
 import { mainnet } from "viem/chains";
 import FENIX_ABI from "@/app/models/abi/fenix.json";
-import { calculateEarlyPayout, calculateLatePayout } from "@/app/lib/fenix-helpers";
+import { FENIXStake, calculateEarlyPayout, calculateLatePayout } from "@/app/lib/fenix-helpers";
 import { CHAINS } from "@/app/lib/official/chains";
 import { RPCS } from "@/app/lib/official/rpcs";
 import { FENIX_ADDRESS } from "@/app/lib/official/protocols/fenix";
@@ -99,24 +99,35 @@ export async function POST(request: NextRequest) {
 
   let results = fenixStakesContracts.flatMap((contract: any, index: number) => {
     const stake = fenixStakes[index].result as any;
+
+    const fenixStake: FENIXStake = {
+      status: stake.status,
+      startTs: stake.startTs,
+      deferralTs: stake.deferralTs == 0 ? null : stake.deferralTs,
+      endTs: stake.endTs,
+      term: stake.term,
+      fenix: Number(formatEther(stake.fenix as bigint)),
+      shares: Number(formatEther(stake.shares as bigint)),
+      payout: Number(formatEther(stake.payout as bigint)),
+    };
+
     const currentTs = Date.now() / 1000;
 
     let penalty = 0;
-    const earlyPayout = calculateEarlyPayout(stake, currentTs);
+    const earlyPayout = calculateEarlyPayout(fenixStake, currentTs);
     if (earlyPayout) {
       penalty = 1 - earlyPayout;
     }
 
-    const latePayout = calculateLatePayout(stake, currentTs);
+    const latePayout = calculateLatePayout(fenixStake, currentTs);
     if (latePayout) {
       penalty = 1 - latePayout;
     }
 
-    const shares = Number(formatEther(stake.shares));
     const poolTotalShares = Number(formatEther(equityPoolTotalShares.result as bigint));
     const poolSupply = Number(formatEther(equityPoolSupply.result as bigint));
-    const equityPayout = (shares / poolTotalShares) * poolSupply;
-    const projectedPayout = equityPayout * (1 - penalty);
+    const equityPayout = (fenixStake.shares / poolTotalShares) * poolSupply;
+    const stakeYield = equityPayout * (1 - penalty);
 
     const publicKey = contract.publicKey;
     const stakeId = contract.stakeId;
@@ -125,21 +136,10 @@ export async function POST(request: NextRequest) {
       publicKey: publicKey,
       chainId: chain.id,
       stakeId: stakeId,
-      projectedPayout: projectedPayout,
-      stake: {
-        status: stake.status,
-        startTs: stake.startTs,
-        deferralTs: stake.deferralTs == 0 ? null : stake.deferralTs,
-        endTs: stake.endTs,
-        term: stake.term,
-        fenix: Number(formatEther(stake.fenix as bigint)),
-        shares: Number(formatEther(stake.shares as bigint)),
-        payout: Number(formatEther(stake.payout as bigint)),
-      },
+      stakeYield: stakeYield,
+      stake: fenixStake,
     };
   });
 
   return NextResponse.json(results, { status: 200 });
-
-  // return NextResponse.json([], { status: 200 });
 }

@@ -4,8 +4,25 @@ import { createPublicClient, getAddress, http, formatUnits, Abi } from "viem";
 import { mainnet } from "viem/chains";
 import XEN_CRYPTO_ABI from "@/app/models/abi/xen-crypto.json";
 import { XENCryptoMint, XENCryptoStake, mintYield, stakeYield } from "@/app/lib/xen-crypto-helpers";
+import { CHAINS } from "@/app/lib/official/chains";
+import { RPCS } from "@/app/lib/official/rpcs";
+import { XEN_CRYPTO_ADDRESS } from "@/app/lib/official/protocols/xen-crypto";
 
 export async function POST(request: NextRequest) {
+  const chainId = request.url.split("/").pop();
+
+  let chain = CHAINS[chainId as unknown as keyof typeof CHAINS];
+  let providerUrl = RPCS[chainId as unknown as keyof typeof RPCS];
+  let xenCryptoContractAddress = XEN_CRYPTO_ADDRESS[chainId as unknown as keyof typeof XEN_CRYPTO_ADDRESS];
+
+  if (chain == null) {
+    return NextResponse.json({ error: "Invalid chain" }, { status: 200 });
+  } else if (providerUrl == null) {
+    return NextResponse.json({ error: "Provider not set" }, { status: 400 });
+  } else if (xenCryptoContractAddress == null) {
+    return NextResponse.json({ error: `XEN address not set on ${chain.name}` }, { status: 400 });
+  }
+
   const xenCryptoContract = {
     address: getAddress("0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8"),
     abi: XEN_CRYPTO_ABI as Abi,

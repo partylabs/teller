@@ -90,7 +90,7 @@ export async function POST(request: NextRequest) {
       return {
         publicKey: publicKeys[index],
         chainId: chain.id,
-        mintYield: estimatedYield,
+        yield: estimatedYield,
         mint: xenCryptoMint,
       };
     });
@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
       return {
         publicKey: publicKeys[index],
         chainId: chain.id,
-        stakeYield: estimatedYield,
+        yield: estimatedYield,
         stake: xenCryptoStake,
       };
     });

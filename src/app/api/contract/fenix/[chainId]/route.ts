@@ -136,7 +136,7 @@ export async function POST(request: NextRequest) {
       publicKey: publicKey,
       chainId: chain.id,
       stakeId: stakeId,
-      stakeYield: stakeYield,
+      yield: stakeYield,
       stake: fenixStake,
     };
   });

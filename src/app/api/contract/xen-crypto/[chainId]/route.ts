@@ -139,7 +139,6 @@ export async function POST(request: NextRequest) {
   if (Object.keys(responseResults).length === 0) {
     return NextResponse.json([], { status: 200 });
   }
-  console.log(responseResults);
 
   return NextResponse.json(responseResults, { status: 200 });
 }

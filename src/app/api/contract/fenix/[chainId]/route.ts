@@ -136,6 +136,7 @@ export async function POST(request: NextRequest) {
 
     return {
       publicKey: publicKey,
+      address: fenixContractAddress,
       chainId: chain.id,
       stakeId: stakeId,
       yield: stakeYield,

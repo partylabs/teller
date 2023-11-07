@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { createPublicClient, getAddress, http, formatUnits, Abi } from "viem";
-import { mainnet } from "viem/chains";
 import XEN_CRYPTO_ABI from "@/app/models/abi/xen-crypto.json";
 import { XENCryptoMint, XENCryptoStake, mintYield, stakeYield } from "@/app/lib/xen-crypto-helpers";
 import { CHAINS } from "@/app/lib/official/chains";
@@ -93,6 +92,7 @@ export async function POST(request: NextRequest) {
 
       return {
         publicKey: publicKeys[index],
+        address: xenCryptoContractAddress,
         chainId: chain.id,
         yield: estimatedYield,
         mint: xenCryptoMint,
@@ -121,6 +121,7 @@ export async function POST(request: NextRequest) {
 
       return {
         publicKey: publicKeys[index],
+        address: xenCryptoContractAddress,
         chainId: chain.id,
         yield: estimatedYield,
         stake: xenCryptoStake,

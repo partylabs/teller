@@ -13,9 +13,9 @@ export interface FENIXStake {
   deferralTs: number;
   endTs: number;
   term: number;
-  fenix: number;
-  shares: number;
-  payout: number;
+  fenix: bigint;
+  shares: bigint;
+  payout: bigint;
 }
 
 export const calculateEarlyPayout = (stake: FENIXStake, blockTs: number) => {

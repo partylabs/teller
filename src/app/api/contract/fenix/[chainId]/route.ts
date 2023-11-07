@@ -106,9 +106,9 @@ export async function POST(request: NextRequest) {
       deferralTs: stake.deferralTs == 0 ? null : stake.deferralTs,
       endTs: stake.endTs,
       term: stake.term,
-      fenix: Number(formatEther(stake.fenix as bigint)),
-      shares: Number(formatEther(stake.shares as bigint)),
-      payout: Number(formatEther(stake.payout as bigint)),
+      fenix: stake.fenix,
+      shares: stake.shares,
+      payout: stake.payout,
     };
 
     const currentTs = Date.now() / 1000;
@@ -124,9 +124,11 @@ export async function POST(request: NextRequest) {
       penalty = 1 - latePayout;
     }
 
+    let fenixStakeShares = Number(formatEther(fenixStake.shares as bigint));
+
     const poolTotalShares = Number(formatEther(equityPoolTotalShares.result as bigint));
     const poolSupply = Number(formatEther(equityPoolSupply.result as bigint));
-    const equityPayout = (fenixStake.shares / poolTotalShares) * poolSupply;
+    const equityPayout = (fenixStakeShares / poolTotalShares) * poolSupply;
     const stakeYield = equityPayout * (1 - penalty);
 
     const publicKey = contract.publicKey;

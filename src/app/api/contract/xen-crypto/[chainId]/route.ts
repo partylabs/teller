@@ -8,6 +8,10 @@ import { CHAINS } from "@/app/lib/official/chains";
 import { RPCS } from "@/app/lib/official/rpcs";
 import { XEN_CRYPTO_ADDRESS } from "@/app/lib/official/protocols/xen-crypto";
 
+(BigInt.prototype as any).toJSON = function () {
+  return this.toString();
+};
+
 export async function POST(request: NextRequest) {
   const chainId = request.url.split("/").pop();
 
@@ -134,6 +138,7 @@ export async function POST(request: NextRequest) {
   if (Object.keys(responseResults).length === 0) {
     return NextResponse.json([], { status: 200 });
   }
+  console.log(responseResults);
 
   return NextResponse.json(responseResults, { status: 200 });
 }

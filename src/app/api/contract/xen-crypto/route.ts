@@ -25,5 +25,18 @@ export async function POST(request: NextRequest) {
     })
   ).then((results) => results.flat());
 
-  return NextResponse.json(balances, { status: 200 });
+  let mergedMints: any[] = [];
+  let mergedStakes: any[] = [];
+
+  balances.forEach((balance) => {
+    if (balance.mints) mergedMints = [...mergedMints, ...balance.mints];
+    if (balance.stakes) mergedStakes = [...mergedStakes, ...balance.stakes];
+  });
+
+  const mergedBalances = {
+    mints: mergedMints,
+    stakes: mergedStakes,
+  };
+
+  return NextResponse.json(mergedBalances, { status: 200 });
 }

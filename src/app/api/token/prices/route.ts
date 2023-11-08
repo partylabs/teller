@@ -6,6 +6,10 @@ export async function POST(request: NextRequest) {
   const { origin } = request.nextUrl;
   const data = await request.json();
 
+  const controller = new AbortController();
+  const signal = controller.signal;
+  setTimeout(() => controller.abort(), 10000); // 10 seconds timeout
+
   const officialChainIds = Object.keys(CHAINS);
   const chainIds = Object.keys(data);
 
@@ -17,15 +21,20 @@ export async function POST(request: NextRequest) {
 
   const prices = await Promise.all(
     chainIds.flatMap(async (chainId) => {
-      const tokens = data[chainId] ?? [];
-      const response = await fetch(`${origin}/api/token/prices/${chainId}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ tokens }),
-      });
-      return await response.json();
+      try {
+        const tokens = data[chainId] ?? [];
+        const response = await fetch(`${origin}/api/token/prices/${chainId}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ tokens }),
+          signal,
+        });
+        return await response.json();
+      } catch (err) {
+        console.log(err);
+      }
     })
   ).then((results) => results.flat());
 

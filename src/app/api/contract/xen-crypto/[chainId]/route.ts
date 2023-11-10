@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
     const readMint = {
       ...xenCryptoContract,
       functionName: "userMints",
-      args: [getAddress("0xBFBE733d560bc0a4E5502587853f92b3aE83344F")],
+      args: [getAddress(publicKey)],
     };
     const readStake = {
       ...xenCryptoContract,
@@ -66,6 +66,8 @@ export async function POST(request: NextRequest) {
   const xenMintsStakes = await client.multicall({
     contracts: xenCryptoContracts,
   });
+
+  console.log(xenMintsStakes);
 
   const mintResults = xenMintsStakes
     .filter((_, index) => index % 2 === 0)

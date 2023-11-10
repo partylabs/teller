@@ -67,8 +67,6 @@ export async function POST(request: NextRequest) {
     contracts: xenCryptoContracts,
   });
 
-  console.log(xenMintsStakes);
-
   const mintResults = xenMintsStakes
     .filter((_, index) => index % 2 === 0)
     .flatMap((mint, index) => {
